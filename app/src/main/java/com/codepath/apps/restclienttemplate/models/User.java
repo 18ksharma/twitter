@@ -9,7 +9,7 @@ public class User {
     public String name;
     public String screenName;
     public String publicImageUrl;
-    //EMpty constructor needed by Parceler library
+    //Empty constructor needed by Parceler library
     public User(){}
 
     public static User fromJson(JSONObject jsonObject) throws JSONException {

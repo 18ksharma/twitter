@@ -40,6 +40,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="5dp"
         tools:text="8 minutes ago" />
+
+    <ImageView
+        android:id="@+id/ivContentImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBody"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="5dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
 </RelativeLayout>
