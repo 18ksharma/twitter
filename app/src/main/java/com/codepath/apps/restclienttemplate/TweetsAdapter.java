@@ -21,6 +21,8 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Locale;
 
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
+
 public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder>{
 
     Context context;
@@ -92,7 +94,7 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
             String relativeTime;
             relativeTime=getRelativeTimeAgo(tweet.createdAd);
             tvTimestamp.setText(relativeTime);
-            Glide.with(context).load(tweet.user.publicImageUrl).into(ivProfileImage);
+            Glide.with(context).load(tweet.user.publicImageUrl).transform(new RoundedCornersTransformation(50, 5)).into(ivProfileImage);
 
 
             if (tweet.tweetPics==null){
