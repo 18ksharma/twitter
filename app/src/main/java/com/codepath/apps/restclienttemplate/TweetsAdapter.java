@@ -77,6 +77,11 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         TextView tvScreenName;
         TextView tvTimestamp;
         ImageView ivContentImage;
+        ImageView ivLike;
+        ImageView ivLikePressed;
+        ImageView ivRetweet;
+        ImageView ivRetweetPressed;
+        TwitterClient twitterClient;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -85,6 +90,10 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
             tvScreenName = itemView.findViewById(R.id.tvScreenName);
             tvTimestamp = itemView.findViewById(R.id.tvTimestamp);
             ivContentImage = itemView.findViewById(R.id.ivContentImage);
+            ivLike=itemView.findViewById(R.id.ivLike);
+            ivLikePressed=itemView.findViewById(R.id.ivLikePressed);
+            ivRetweet=itemView.findViewById(R.id.ivRetweet);
+            ivRetweetPressed=itemView.findViewById(R.id.ivRetweetPressed);
         }
 
         //Helper method
@@ -104,6 +113,25 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
                 ivContentImage.setVisibility(View.VISIBLE);
                 Glide.with(context).load(tweet.tweetPics).override(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.MATCH_PARENT).into(ivContentImage);
             }
+
+            ivLike.setOnClickListener(new View.OnClickListener(){
+
+                @Override
+                public void onClick(View v) {
+                    ivLike.setVisibility(View.INVISIBLE);
+                    ivLikePressed.setVisibility(View.VISIBLE);
+                    //twitterClient.likeTweet();
+                }
+            });
+
+            ivRetweet.setOnClickListener(new View.OnClickListener(){
+
+                @Override
+                public void onClick(View v) {
+                    ivRetweet.setVisibility(View.INVISIBLE);
+                    ivRetweetPressed.setVisibility(View.VISIBLE);
+                }
+            });
         }
     }
 
