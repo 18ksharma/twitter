@@ -1,5 +1,6 @@
 package com.codepath.apps.restclienttemplate;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.text.format.DateUtils;
 import android.view.LayoutInflater;
@@ -98,7 +99,8 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
                 ivContentImage.setVisibility(View.GONE);
             }
             else{
-                Glide.with(context).load(tweet.tweetPics).into(ivContentImage);
+                ivContentImage.setVisibility(View.VISIBLE);
+                Glide.with(context).load(tweet.tweetPics).override(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.MATCH_PARENT).into(ivContentImage);
             }
         }
     }

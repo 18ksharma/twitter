@@ -35,6 +35,7 @@ public class Tweet {
         //If there is media in entities, adds images to tweet object
         if(entities.has("media")){
             tweet.tweetPics=entities.getJSONArray("media").getJSONObject(0).getString("media_url_https");
+            Log.i("Tweet", tweet.tweetPics);
         }
         else {
             tweet.tweetPics=null;

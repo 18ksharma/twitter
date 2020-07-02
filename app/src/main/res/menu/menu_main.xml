@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <vector
-        android:tint="#ff1da1f2">
-
-    </vector>
     <item
         android:id="@+id/compose"
         android:icon="@android:drawable/ic_menu_edit"
