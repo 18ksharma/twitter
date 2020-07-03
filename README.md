@@ -46,8 +46,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-
 [App Demo Link](screenshots/TweetDemo.gif)
+[App Refresh Feature Link](screenshots/refreshdemo.gif)
 
 GIF created with [Kap](http://www.getkap.co).
 
